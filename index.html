@@ -1,0 +1,43 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <title></title> <!-- max 70 characters -->
+
+  <meta charset="utf-8">
+  <meta name="description" content="">    <!-- Define a description of your web page -->
+  <meta name="author" content="Thomas Ray">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Setting the viewport to make your website look good on all devices-->
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon"> <!-- ADD A FAVICON HERE -->
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css"> <!-- jQuery UI styles -->
+  <link rel="stylesheet" href="css/style.css"> <!-- Custom CSS file -->
+</head>
+<body>
+  <header>
+    <h1>Weekday Calculator</h1>
+  </header>
+  <div class="wrapper">
+    <h3>Pick a date</h3>
+
+    <form action="">
+      <input type="text" name="day" id="day" class="date" placeholder="dd">
+      <input type="text" name="month" id="month" class="date" placeholder="mm">
+      <input type="text" name="year" id="year" class="date" placeholder="yyyy">
+      <br>
+      <input type="button" value="Submit" class="btn-1" id="btn-submit">
+    </form>
+
+    <div id="weekDayBox">
+    </div>
+  </div>
+  <footer>
+    <p>Based on the modern <a href="https://en.wikipedia.org/wiki/Gregorian_calendar">Gregorian calendar</a>.</p>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> <!-- import jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script> <!-- import jQuery UI -->
+  <script language="Javascript" type="text/javascript" src="js/script.js"></script> <!-- Custom Javascript file -->
+</body>
+</html>
