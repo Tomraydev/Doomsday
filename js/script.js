@@ -14,6 +14,37 @@ $( document ).ready(function() {
     if ( day < 1 || day > 31) {
       return "Please enter a valid day";
     }
+
+    // Determining if it's a leap year
+    if ( year % 4 == 0 && year % 100 != 0) {
+      isLeap = true;
+    }
+    else if ( year % 400 == 0){
+      isLeap = true;
+    }
+    else {
+      isLeap = false;
+    }
+    switch (month) {
+      case 4:
+      case 6:
+      case 9:
+      case 11:
+        maxDay = 30;
+        break;
+      case 2:
+        if (isLeap) {
+          maxDay = 29;
+        } else {
+          maxDay = 28;
+        }
+        break;
+      default:
+        maxDay = 31;
+    }
+    if (day > maxDay) {
+      return "Please enter a valid day";
+    }
     // Getting the Anchor Day
     century = ( (year - (year % 100) ) / 100) + 1;
     switch (century % 4) {
@@ -86,17 +117,6 @@ $( document ).ready(function() {
           break;
     }
 
-    // Determining if it's a leap year
-    if ( year % 4 == 0 && year % 100 != 0) {
-      isLeap = true;
-    }
-    else if ( year % 400 == 0){
-      isLeap = true;
-    }
-    else {
-      isLeap = false;
-    }
-
     // Determining the doomsday number
     if (isLeap == true && month > 2) {
       dayNum +=1;
@@ -113,10 +133,7 @@ $( document ).ready(function() {
       dayDiff = (dayNum - doomsDayNum) % 7;
       dayOfWeek = (7 + doomsday + dayDiff) % 7;
     }
-    console.log(doomsday);
-    console.log(anchorDay);
-    console.log(dayOfWeek);
-    console.log(dayNum);
+
     // Returning the day of the week
     switch (dayOfWeek) {
       case 0 :
