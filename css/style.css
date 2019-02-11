@@ -2,8 +2,11 @@ body {
   padding:0px;
   margin:0px;
   font-family: Arial, 'sans-serif';
-  color: #222;
-  background-color: #eee;
+  color: #eee;
+  background-image: url("../images/clock.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #141a1e;
 }
 header {
   text-align: center;
@@ -15,6 +18,7 @@ header {
 input.date {
   font-size:1.5em;
   width:100px;
+  margin-bottom: 8px;
 }
 .btn-1 {
   display: inline-block;
@@ -25,10 +29,26 @@ input.date {
 #weekDayBox {
   padding:8px 16px;
   font-size:2em;
-  color:#0066ff;
+  color:#eee;
 }
 footer {
   position:absolute;
   bottom:0;
   padding:0 16px;
+}
+
+footer a:link {
+  color: #eee;
+}
+footer a:visited {
+  color: #ddd;
+}
+footer a:hover {
+  color: #fff;
+}
+
+@media screen and (max-width:1025px) {
+  body {
+    background-size: auto;
+  }
 }

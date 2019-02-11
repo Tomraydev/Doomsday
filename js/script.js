@@ -1,5 +1,11 @@
 $( document ).ready(function() {
 
+
+  var date = new Date();
+  $('#day').val( date.getDate() );
+  $('#month').val( date.getMonth() + 1 );
+  $('#year').val( date.getFullYear() );
+
   function getWeekDay(day, month, year) {
     day = parseInt(day);
     month = parseInt(month);
